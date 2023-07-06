@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+  body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr repeat(2, 2fr) 0.5fr;
+    grid-template-columns: 0.5fr repeat(2, 2fr);
+    grid-template-areas: 
+    "nav header header"
+
+    "nav main main"
+
+    "nav main main"
+
+    "nav footer footer"
+     ;
+     grid-column-gap: 20px ;
+     grid-row-gap: 20px ;
+  }  
+
+ header{
+    background: linear-gradient(90deg, rgba(180,74,58,1) 0%, rgba(253,183,29,1) 50%, rgba(252,176,69,1) 100%);
+    grid-area: header;
+ }
+ nav{
+    background-color: gold;
+    grid-area: nav;
+ }
+ main{
+    display: grid;
+    grid-area: main;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-areas:
+    "section1 aside" 
+    "section2 aside" ;
+    grid-column-gap: 20px ;
+    grid-row-gap: 20px ;
+ }
+
+ #section_uno{
+    background-color: gold;
+    grid-area: section1;
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-items: start;
+    align-items: center;
+ }
+
+ #section_uno div{
+    background-color: rgb(228, 60, 172);
+    border: 1px solid black;
+    font-size: 2rem;
+    color: rgb(248, 243, 243);
+
+ }
+ .self{
+    justify-self: end ;
+ }
+
+
+ #section_dos{
+    background-color: gold;
+    grid-area: section2;
+ }
+ 
+aside{
+    background-color: gold;
+    grid-area: aside;
+}
+
+ footer{
+    background-color: gold;
+    grid-area: footer;
+ }
